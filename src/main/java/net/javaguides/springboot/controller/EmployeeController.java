@@ -28,6 +28,12 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
+	
+	@GetMapping("/datetime")
+	public String getDateTime(){
+		return new java.util.Date().toString();
+	}	
+	
 	// get all employees
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
